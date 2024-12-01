@@ -5,12 +5,10 @@ async function main() {
   console.log("Deployer Address: ", deployer.address);
 
   const BrunoCoin = await hre.ethers.getContractFactory("BrunoCoin");
-  
-  // Aguarde o deploy
-  const brunoToken = await BrunoCoin.deploy(deployer.address);
-  await brunoToken.waitForDeployment(); // Aguarda a confirmação na blockchain
 
-  // Obtém o endereço do contrato
+  const brunoToken = await BrunoCoin.deploy(deployer.address);
+  await brunoToken.waitForDeployment();
+
   const contractAddress = await brunoToken.getAddress();
   console.log("Token deployed to:", contractAddress);
 }

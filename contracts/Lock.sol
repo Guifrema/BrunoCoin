@@ -17,4 +17,32 @@ contract BrunoCoin is ERC20, ERC20Burnable, Ownable {
     function mint(address to, uint256 amount) public onlyOwner {
         _mint(to, amount);
     }
+
+    function burn(address to, uint256 amount) public onlyOwner {
+        _burn(to, amount);
+    }
+
+    function transferTo(address from, address to, uint256 amount) public onlyOwner{
+        _transfer(from, to, amount);
+    }
+
+    function balance(address account) public view onlyOwner returns (uint256){
+       return balanceOf(account);
+    }
+
+    function supply() public view onlyOwner returns (uint256){
+       return totalSupply();
+    }
+
+    function getName() public view onlyOwner returns (string memory){
+        return name();
+    }
+
+    function getSymbol() public view onlyOwner returns (string memory){
+        return symbol();
+    }
+
+    function info() public view onlyOwner returns (uint8){
+        return decimals();
+    }
 }
