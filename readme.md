@@ -23,13 +23,12 @@ Nosso token, **Brunocoin**, foi configurado com as seguintes características:
   - **`totalSupply()`**: retorna a quantidade total de tokens em circulação.
   - **`balanceOf(address)`**: retorna o saldo de uma carteira.
   - **`transfer(address, uint256)`**: permite transferências de tokens entre carteiras.
-  - **`approve(address, uint256)` e `allowance(address, address)`**: para autorizar e verificar permissões de transferência.
   - **Funções adicionais**: 
     - **Burn**: para destruir tokens, reduzindo o total em circulação.
     - **Mint**: para criar novos tokens, limitado ao administrador.
 
 ### Processo de Deploy
-1. Configuramos a rede Polygon com o endpoint da rede de testes e utilizamos moedas nativas (MATIC) para o pagamento de taxas.
+1. Configuramos a rede Polygon com o endpoint da rede de testes e utilizamos moedas nativas (POL) para o pagamento de taxas.
 2. Realizamos o deploy do contrato inteligente utilizando o Hardhat, integrando as bibliotecas do OpenZeppelin para funções padrões do ERC-20.
 
 ## Resultados
