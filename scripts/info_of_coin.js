@@ -5,6 +5,7 @@ async function main() {
     // Endereço do contrato e do usuário
     const contractAddress = "0xB89bf47CBE385703085A90cE1383593FA8485aA8"; // Substitua pelo endereço do seu contrato
     const BrunoCoin = await hre.ethers.getContractAt("BrunoCoin", contractAddress);
+    console.log(BrunoCoin)
 
     const name = await BrunoCoin.getName();
     const symbol = await BrunoCoin.getSymbol();
